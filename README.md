@@ -2,14 +2,14 @@
 Aplicación desarrollada en **Spring Boot** para automatizar diferentes procesos relacionados con la organización del profesorado en un centro educativo.
 
 El sistema gestiona principalmente dos áreas:
-- 🛡 **Gestión de guardias**
-- 📅 **Gestión de asuntos propios**
+-  **Gestión de guardias**
+-  **Gestión de asuntos propios**
 
 Este proyecto está diseñado siguiendo las buenas prácticas de Spring, arquitectura por capas (controladores, servicios, repositorios, entidades, DTOs) y probado mediante **Postman**.
 
 ---
 
-# 🌟 Funcionalidades principales
+# Funcionalidades principales
 
 ## 1️⃣ Gestión de guardias
 La aplicación permitirá:
@@ -56,7 +56,7 @@ Configuración establecida al inicio del curso.
 
 ---
 
-# 🗂 Carga inicial de datos
+#  Carga inicial de datos
 Al iniciar el curso se cargan varios **CSV**:
 - Datos del profesorado
 - Horarios
@@ -69,11 +69,14 @@ El sistema enviará automáticamente un email con:
 
 ---
 
-# 🧩 Arquitectura del proyecto
+# Arquitectura del proyecto
 El proyecto sigue una estructura profesional basada en capas:
 
 Incluye:
 - Entidades
+- Repositorios
+- Servicios
+- Controladores
 - DTO de una entidad
 - DTO combinado de varias entidades
 - Validaciones del sistema
@@ -81,4 +84,4 @@ Incluye:
 
 ---
 
-# 🧪 Endpoints (test con Postman)
+#  Endpoints (test con Postman)
