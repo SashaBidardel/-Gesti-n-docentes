@@ -23,13 +23,13 @@ public class DocenteController {
 	}
 	
 	// Listar todos los docentes por orden de apellidos
-    @GetMapping
+    @GetMapping("/lista")
     public List<Docente> listarDocentes() {
         return docenteService.listarDocentesApellidos();
     }
 
    // listar todos los docentes en formato DTO
-    @GetMapping("/dto/docentes")
+    @GetMapping("/dto/lista")
     public List<DocenteDto> listarDocentesDTO() {
         return docenteService.listarDocentesDTO();
     }

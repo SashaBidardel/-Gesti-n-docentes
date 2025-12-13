@@ -9,14 +9,18 @@ import org.springframework.stereotype.Repository;
 import com.example.sashabf.entity.AsuntoPropio;
 
 @Repository
-public interface AsuntoPropioRepository extends JpaRepository <AsuntoPropio,Long> {
+public interface AsuntoPropioRepository extends JpaRepository<AsuntoPropio, Long> {
 
-	// Listar aprobados para un docente
-	List<AsuntoPropio> findByDocenteIdAndAprobadoTrue(Long docenteId);
+    // Obtener días propios aprobados de un docente
+    List<AsuntoPropio> findByDocenteIdAndAprobadoTrue(Long docenteId);
 
-	// Listar rechazados para un docente
-	List<AsuntoPropio> findByDocenteIdAndAprobadoFalse(Long docenteId);
+    // Obtener días propios rechazados de un docente
+    List<AsuntoPropio> findByDocenteIdAndAprobadoFalse(Long docenteId);
 
-	List<AsuntoPropio> findByDocenteIdAndDiaSolicitadoBetween(Long docenteId, Date valueOf, Date fecha);
+    // Comprobar si el docente ya tiene un día propio en un rango de fechas
+    List<AsuntoPropio> findByDocenteIdAndDiaSolicitadoBetween(Long docenteId,Date fechaInicio,Date fechaFin);
 
-}
+	List<AsuntoPropio> findByDocenteIdAndDiaSolicitado(Long docenteId, Date valueOf);
+            
+ }
+

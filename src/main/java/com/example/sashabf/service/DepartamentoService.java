@@ -14,8 +14,12 @@ public class DepartamentoService {
 
 	@Autowired
 	private DepartamentoRepository departamentoRepository;
-    
+    //obtener lista de docentes por departamento
 	public List<Docente> listarDocentesNombre(String departamento){
 		return departamentoRepository.findByNombre(departamento).getDocentes();
+	}
+	//obtener nº de docentes por departamento
+	public long numeroProfersoresPorDepartamento(String departamento) {
+		return departamentoRepository.findByNombre(departamento).getDocentes().size();
 	}
 }

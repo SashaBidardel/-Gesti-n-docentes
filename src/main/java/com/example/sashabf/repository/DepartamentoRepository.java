@@ -11,5 +11,6 @@ import com.example.sashabf.entity.Departamento;
 public interface DepartamentoRepository extends JpaRepository <Departamento,Long> {
 
 	Departamento findByNombre(String nombreDepartamento);
+	
 
 }

@@ -19,9 +19,13 @@ public class DepartamentoController {
 		super();
 		this.departamentoService = departamentoService;
 	}
-	@GetMapping("/{nombre}")
+	@GetMapping("docentes/{nombre}")
 	public List<Docente> docentesNombreDepartamento (@PathVariable String nombre){
 		return departamentoService.listarDocentesNombre(nombre);
+	}
+	@GetMapping("/numero_docentes/{nombre}")
+	public long numeroProfesoresPorDepartamento (@PathVariable String nombre){
+		return departamentoService.numeroProfersoresPorDepartamento(nombre);
 	}
 	
 }
